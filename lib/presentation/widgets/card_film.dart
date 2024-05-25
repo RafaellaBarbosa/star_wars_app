@@ -8,12 +8,14 @@ class CardFilm extends StatelessWidget {
     required this.director,
     required this.producer,
     required this.releaseDate,
+    required this.url,
   });
 
   final String title;
   final String director;
   final String producer;
   final String releaseDate;
+  final String url;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +23,16 @@ class CardFilm extends StatelessWidget {
       elevation: 2,
       color: Colors.transparent,
       child: ListTile(
+        leading: Image.network(
+          url,
+          fit: BoxFit.contain,
+        ),
         title: Text(
           title,
           style: const TextStyle(
-              color: AppColors.crawlYellow, fontWeight: FontWeight.w600),
+            color: AppColors.crawlYellow,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         subtitle: Column(
           children: [

@@ -56,6 +56,8 @@ class _FilmsPageState extends State<FilmsPage> {
                     director: film.director,
                     producer: film.producer,
                     releaseDate: film.releaseDate,
+                    url:
+                        'https://starwars-visualguide.com/assets/img/films/${film.url.split('/').reversed.skip(1).first}.jpg',
                   );
                 },
               ),
