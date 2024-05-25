@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:star_wars_app/core/utils/colors.dart';
 
+import '../../core/utils/images.dart';
+
 class CardFilm extends StatelessWidget {
   const CardFilm({
     super.key,
@@ -26,6 +28,12 @@ class CardFilm extends StatelessWidget {
         leading: Image.network(
           url,
           fit: BoxFit.contain,
+          errorBuilder: (context, error, stackTrace) {
+            return Image.asset(
+              AppImages.placeholder,
+              fit: BoxFit.fill,
+            );
+          },
         ),
         title: Text(
           title,

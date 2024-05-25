@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/utils/images.dart';
 import '../../data/models/character_model.dart';
 
 class CharacterCard extends StatelessWidget {
@@ -18,6 +19,12 @@ class CharacterCard extends StatelessWidget {
             child: Image.network(
               'https://starwars-visualguide.com/assets/img/characters/${character.url.split('/').reversed.skip(1).first}.jpg',
               fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return Image.asset(
+                  AppImages.placeholder,
+                  fit: BoxFit.fill,
+                );
+              },
             ),
           ),
         ),

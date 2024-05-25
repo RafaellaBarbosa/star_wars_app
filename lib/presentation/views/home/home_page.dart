@@ -3,7 +3,6 @@ import 'package:star_wars_app/presentation/widgets/card_category.dart';
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/images.dart';
 
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -50,9 +49,10 @@ class HomePage extends StatelessWidget {
                   pathImage: AppImages.films,
                   onTap: () => Navigator.of(context).pushNamed('/films'),
                 ),
-                const CardCategory(
+                CardCategory(
                   categoryName: 'Planets',
                   pathImage: AppImages.planets,
+                  onTap: () => Navigator.of(context).pushNamed('/planets'),
                 ),
                 const CardCategory(
                   categoryName: 'species',

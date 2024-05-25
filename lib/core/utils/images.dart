@@ -8,4 +8,5 @@ abstract class AppImages {
   static const String species = 'assets/images/species.jpg';
   static const String starships = 'assets/images/starships.jpg';
   static const String vehicles = 'assets/images/vehicles.jpg';
+  static const String placeholder = 'assets/images/placeholder.jpg';
 }
