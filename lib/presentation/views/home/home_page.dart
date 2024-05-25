@@ -54,17 +54,20 @@ class HomePage extends StatelessWidget {
                   pathImage: AppImages.planets,
                   onTap: () => Navigator.of(context).pushNamed('/planets'),
                 ),
-                const CardCategory(
+                CardCategory(
                   categoryName: 'species',
                   pathImage: AppImages.species,
+                  onTap: () => Navigator.of(context).pushNamed('/species'),
                 ),
-                const CardCategory(
+                CardCategory(
                   categoryName: 'starships',
                   pathImage: AppImages.starships,
+                  onTap: () => Navigator.of(context).pushNamed('/starships'),
                 ),
-                const CardCategory(
+                CardCategory(
                   categoryName: 'vehicles',
                   pathImage: AppImages.vehicles,
+                  onTap: () => Navigator.of(context).pushNamed('/vehicles'),
                 ),
               ],
             ),
