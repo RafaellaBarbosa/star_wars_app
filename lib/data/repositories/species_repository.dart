@@ -1,4 +1,4 @@
-import '../datasources/species_data_source.dart';
+import '../datasources/species_datasource.dart';
 import '../models/species_model.dart';
 
 class SpeciesRepository {
