@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:star_wars_app/data/datasources/characters_datasource.dart';
+import 'package:star_wars_app/data/datasources/vehicle_datasource.dart';
+import 'package:star_wars_app/data/repositories/vehicle_repository.dart';
 import 'package:star_wars_app/presentation/views/home/home_page.dart';
 import 'package:star_wars_app/presentation/views/planets/planets_page.dart';
 import 'package:star_wars_app/presentation/views/splash/splash_page.dart';
+import 'package:star_wars_app/presentation/views/vehicle/vehicle_page.dart';
 
 import 'data/datasources/film_datasource.dart';
 import 'data/datasources/planets_datasource.dart';
@@ -19,6 +22,7 @@ import 'presentation/viewmodels/film_view_model.dart';
 import 'presentation/viewmodels/planets_view_model.dart';
 import 'presentation/viewmodels/species_view_model.dart';
 import 'presentation/viewmodels/starship_view_model.dart';
+import 'presentation/viewmodels/vehicle_view_model.dart';
 import 'presentation/views/Species/species_page.dart';
 import 'presentation/views/characters/characters_page.dart';
 import 'presentation/views/films/films_page.dart';
@@ -70,6 +74,13 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        ChangeNotifierProvider(
+          create: (_) => VehicleViewModel(
+            VehicleRepository(
+              VehicleDataSource(),
+            ),
+          ),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -83,6 +94,7 @@ class MyApp extends StatelessWidget {
           '/planets': (context) => const PlanetsPage(),
           '/species': (context) => const SpeciesPage(),
           '/starships': (context) => const StarshipsPage(),
+          '/vehicles': (context) => const VehiclePage(),
         },
       ),
     );
