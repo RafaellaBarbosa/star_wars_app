@@ -23,7 +23,7 @@ import 'presentation/viewmodels/planets_view_model.dart';
 import 'presentation/viewmodels/species_view_model.dart';
 import 'presentation/viewmodels/starship_view_model.dart';
 import 'presentation/viewmodels/vehicle_view_model.dart';
-import 'presentation/views/Species/species_page.dart';
+import 'presentation/views/species/species_page.dart';
 import 'presentation/views/characters/characters_page.dart';
 import 'presentation/views/films/films_page.dart';
 import 'presentation/views/starships/starships_page.dart';
