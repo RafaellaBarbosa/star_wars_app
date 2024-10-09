@@ -34,7 +34,7 @@ Siga os passos abaixo para rodar o aplicativo localmente:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/star-wars-flutter-app.git
+   git clone https://github.com/RafaellaBarbosa/star_wars_app.git
    ```
 
 2. **Instale as dependências:**
